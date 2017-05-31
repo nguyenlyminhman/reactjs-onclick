@@ -1,3 +1,11 @@
+const Title = React.createClass({
+    render: () => {
+        return (
+            <h1> Click Event </h1>
+        );
+    }
+});
+
 var CompoButton = React.createClass({
     clickAddNum() {
         this.state.num = parseInt(this.state.num) + 1
@@ -8,22 +16,18 @@ var CompoButton = React.createClass({
     },
     render: function () {
         return (
-            <button onClick={this.clickAddNum}> Click {this.state.num} </button>
+            <div>
+                <Title />
+                <button onClick={this.clickAddNum}> Click {this.state.num} </button>
+            </div>
         );
     }
 });
 
-const Center = React.createClass({
-    render: () => {
-        return (
-            <h1> Strainning List </h1>
-        );
-    }
-});
+
 
 ReactDOM.render(
     <div>
-        <Center />
         <CompoButton />
     </div>,
     document.getElementById("root")
