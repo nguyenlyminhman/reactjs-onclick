@@ -1,7 +1,14 @@
 var CompoButton = React.createClass({
+    clickAddNum() {
+        this.state.num = parseInt(this.state.num) + 1
+        return this.setState(this.state);
+    },
+    getInitialState() {
+        return { num: 0 };
+    },
     render: function () {
         return (
-            <button> Click me </button>
+            <button onClick={this.clickAddNum}> Click {this.state.num} </button>
         );
     }
 });
