@@ -1,7 +1,7 @@
-const compobutton = React.createClass({
-    render: () => {
+var CompoButton = React.createClass({
+    render: function () {
         return (
-            <button type="submit" >Click me</button>
+            <button> Click me </button>
         );
     }
 });
@@ -17,7 +17,7 @@ const Center = React.createClass({
 ReactDOM.render(
     <div>
         <Center />
-        <compobutton />
+        <CompoButton />
     </div>,
     document.getElementById("root")
 );
